@@ -1,14 +1,16 @@
 <h1>Aula</h1>
 
-<p>Aula introdutória a respeito do Agular</p>
-<p>Boa Noite {{ nome }} </p>
+<p class = paragrafo>Aula introdutória a respeito do Agular</p>
+<p class = paragrafo>Boa Noite {{ nome }} </p>
 
-<form>
+<form class = formulario>
   <input type="text" name="valor" value="" [(ngModel)]="valor">
-  <button type="button" name="button" (click)="clique()" >Clicar</button><br/>
-
+  <button type="button" name="button" (click)="clique()" >Clicar</button>
+</form>
+  <br/>
+<form class = formulario>
   <input type="text" name="num1" value="" [(ngModel)]="num1"><br/>
   <input type="text" name="num2" value="" [(ngModel)]="num2"><br/>
   <button type="button" name="button" (click)="soma()" >Clique</button>
-  <p>{{ total }}</p>
+  <p>{{ resposta }}</p>
 </form>

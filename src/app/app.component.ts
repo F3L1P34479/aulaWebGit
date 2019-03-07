@@ -9,12 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent{
   nome: string = "Felipe";
   valor: string = "";
-  num1: string = "";
-  num2: string = "";
+  num1: int = "";
+  num2: int = "";
+  resposta: string;
 
-  soma():Number{
-    this.total= Number(this.num1) + Number(this.num2);
-    return this.total;
+  soma():void{
+    this.resposta= (Number(this.num1) + Number(this.num2));
+    return this.resposta;
   }
   apresentaNome(){
     alert('Boa noite ' + this.valor);
