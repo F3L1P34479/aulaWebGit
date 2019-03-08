@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Caculadoris</h1>
+  <br/>
+  <form class = "formulario">
+    <input type="text" name="num1" value="" [(ngModel)]="num1"><br/>
+    <input type="text" name="num2" value="" [(ngModel)]="num2"><br/>
+    <button type="button" name="button" (click)="somar()" >Somar</button>
+    <button type="button" name="button" (click)="subtrair()" >Subtrair</button>
+    <button type="button" name="button" (click)="multiplicar()" >Multiplicar</button>
+    <button type="button" name="button" (click)="dividir()" >Dividir</button>
+    <p>{{ resposta }}</p>
+  </form>
+</div>

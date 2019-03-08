@@ -1,3 +1,4 @@
+<!--
 <h1>Aula</h1>
 
 <p class = paragrafo>Aula introdutória a respeito do Agular</p>
@@ -14,3 +15,16 @@
   <button type="button" name="button" (click)="soma()" >Clique</button>
   <p>{{ resposta }}</p>
 </form>
+-->
+<div class="container-fluid">
+  <header>
+    <nav class="navbar navbar-expand-md bg-info">
+      <a routerLink="" class="nav-link text-white" href="#">Home</a>
+      <a routerLink="calculadora" class="nav-link text-white" href="#">Calculadora</a>
+      <a routerLink="positivo" class="nav-link text-white" href="#">Positivo Negativo</a>
+      <a routerLink="imc" class="nav-link text-white" href="#">IMC</a>
+      <a routerLink="pessoa" class="nav-link text-white" href="#">Cadastro Pessoa</a>
+    </nav>
+  </header>
+</div>
+<router-outlet></router-outlet>

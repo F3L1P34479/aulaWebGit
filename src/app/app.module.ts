@@ -2,14 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms'
+import { HomeComponent } from './paginas/home/home.component';
+import { CalculadoraComponent } from './paginas/calculadora/calculadora.component';
+import { CadastroPessoaComponent } from './paginas/cadastroPessoa/cadastroPessoa.component';
+import { IMCComponent } from './paginas/imc/imc.component';
+import { PositivoNegativoComponent } from './paginas/positivoNegativo/positivoNegativo.component';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, HomeComponent, CalculadoraComponent,
+    IMCComponent, PositivoNegativoComponent, CadastroPessoaComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
