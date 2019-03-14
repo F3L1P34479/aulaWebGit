@@ -1,0 +1,9 @@
+<div class="container">
+  <form>
+  <div class="form-group">
+    <input type="text" class="form-control" name="valor" value="" [(ngModel)]="valor" placeholder="Informe um valor">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="verificaEhPositivo()">Verificar</button>
+  <p>{{ resposta }}</p>
+</form>
+</div>

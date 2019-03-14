@@ -9,7 +9,7 @@ import { Component } from "@angular/core";
 export class CalculadoraComponent{
   num1: number;
   num2: number;
-  resposta: string;
+  resposta: number;
 
   somar():number{
     this.resposta= (Number(this.num1) + Number(this.num2));

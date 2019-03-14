@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card text-center">
+  <div class="card-header">
+    Calculadora de IMC
+  </div>
+  <div class="card-body">
+    <form class = "formulario">
+      <input type="text" name="peso" value="" [(ngModel)]="peso"><br/>
+      <input type="text" name="altura" value="" [(ngModel)]="altura"><br/>
+      <button type="button" class="btn btn-info" name="button" (click)="calcular()" >Somar</button>
+      <p>{{ resultado }}</p>
+    </form>
+  </div>
+  <div class="card-footer text-muted">
+    <p>{{ resultado }}</p>
+  </div>
+</div>
+
+</div>
