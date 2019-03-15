@@ -7,13 +7,16 @@ import { CalculadoraComponent } from './paginas/calculadora/calculadora.componen
 import { CadastroPessoaComponent } from './paginas/cadastroPessoa/cadastroPessoa.component';
 import { IMCComponent } from './paginas/imc/imc.component';
 import { PositivoNegativoComponent } from './paginas/positivoNegativo/positivoNegativo.component';
+import { ArraysComponent } from './paginas/arrays/arrays.component';
+import { EstadoComponent } from './paginas/estado/estado.component';
+
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module'
 
 @NgModule({
   declarations: [
     AppComponent, HomeComponent, CalculadoraComponent,
-    IMCComponent, PositivoNegativoComponent, CadastroPessoaComponent
+    IMCComponent, PositivoNegativoComponent, CadastroPessoaComponent, ArraysComponent, EstadoComponent
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule

@@ -1,0 +1,25 @@
+<div class="container">
+  <form>
+    <input type="text" name="nome" value="" [(ngModel)]= 'estado.nome' >
+    <input type="text" name="sigla" value="" [(ngModel)]= 'estado.sigla' >
+    <button type="button" name="button" (click)="adicionar()">Add</button>
+  </form>
+  <br/>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Sigla</th>
+        <th scope="col">Opções</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let est of listaEstado; let i = index">
+        <td>{{ est.nome }}</td>
+        <td>{{ est.sigla }}</td>
+        <td><button type="button" name="button" (click)="alterar(i)">alterar</button></td>
+        <td><button type="button" name="button" (click)="excluir(i)">excluir</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

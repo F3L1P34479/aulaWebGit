@@ -1,0 +1,27 @@
+<div class="container">
+  <form>
+    <input type="text" name="nome" value="" [(ngModel)]= 'nome' >
+    <button type="button" name="button" (click)="adicionar()">Add</button>
+  </form>
+  <br/>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Opções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let nome of nomes4; let i = index">
+      <td>{{ nome }}</td>
+      <td><button type="button" name="button" (click)="alterar(i)">alterar</button></td>
+      <td><button type="button" name="button" (click)="excluir(i)">excluir</button></td>
+    </tr>
+  </tbody>
+</table>
+<!--
+  <ul *ngFor="let nome of nomes4">
+    <li>{{ nome }}</li>
+  </ul>
+-->
+</div>
