@@ -1,0 +1,25 @@
+<div class="container">
+  <form >
+    <input type="text" name="nome" value="" [(ngModel)]='categoria.nome' >
+    <input type="text" name="descricao" value="" [(ngModel)]='categoria.descricao' >
+    <button type="button" name="button" (click)="adicionar()">Cadastrar</button>
+  </form>
+  <br/>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descricao</th>
+        <th scope="col">Opções</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cat of listaCategoria; let i = index">
+        <td>{{ cat.nome }}</td>
+        <td>{{ cat.descricao }}</td>
+        <td><button type="button" name="button" (click)="alterar(i)">alterar</button></td>
+        <td><button type="button" name="button" (click)="excluir(i)">excluir</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

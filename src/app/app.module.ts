@@ -9,6 +9,7 @@ import { IMCComponent } from './paginas/imc/imc.component';
 import { PositivoNegativoComponent } from './paginas/positivoNegativo/positivoNegativo.component';
 import { ArraysComponent } from './paginas/arrays/arrays.component';
 import { EstadoComponent } from './paginas/estado/estado.component';
+import { CategoriaComponent } from './paginas/categoria/categoria.component';
 
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module'
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module'
 @NgModule({
   declarations: [
     AppComponent, HomeComponent, CalculadoraComponent,
-    IMCComponent, PositivoNegativoComponent, CadastroPessoaComponent, ArraysComponent, EstadoComponent
+    IMCComponent, PositivoNegativoComponent, CadastroPessoaComponent,
+    ArraysComponent, EstadoComponent, CategoriaComponent
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule

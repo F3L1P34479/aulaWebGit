@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { categoria } from '../../entidades/categoria';
+import { Categoria } from '../../entidades/categoria';
+
 @Component({
   selector:'categoria-component',
   templateUrl:'categoria.component.html',
@@ -9,4 +10,17 @@ import { categoria } from '../../entidades/categoria';
 export class CategoriaComponent{
   listaCategoria = new Array<Categoria>();
   categoria : Categoria = new Categoria();
+
+  adicionar() : void {
+    this.listaCategoria.push(this.categoria);
+    this.categoria = new Categoria();
+  }
+  alterar(i:number) : void {
+    this.categoria = this.listaCategoria[i];
+    this.listaCategoria.splice(i,1);
+
+  }
+  excluir(i:number) : void {
+    this.listaCategoria.splice(i,1);
+  }
 }

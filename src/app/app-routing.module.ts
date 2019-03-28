@@ -8,6 +8,8 @@ import { CadastroPessoaComponent } from './paginas/cadastroPessoa/cadastroPessoa
 import { PositivoNegativoComponent } from './paginas/positivoNegativo/positivoNegativo.component';
 import { ArraysComponent } from './paginas/arrays/arrays.component';
 import { EstadoComponent } from './paginas/estado/estado.component';
+import { CategoriaComponent } from './paginas/categoria/categoria.component';
+//import { MaridoAluguelComponent } from './paginas/maridoAluguel/maridoAluguel.component';
 
 const routes: Routes = [
 {path:'',component:HomeComponent},
@@ -16,7 +18,9 @@ const routes: Routes = [
 {path:'imc',component:IMCComponent},
 {path:'positivo',component:PositivoNegativoComponent},
 {path:'arrays',component:ArraysComponent},
-{path:'estado',component:EstadoComponent}
+{path:'estado',component:EstadoComponent},
+{path:'categoria',component:CategoriaComponent},
+//{path:'marido',component:MaridoAluguelComponent}
 ];
 
 @NgModule({
