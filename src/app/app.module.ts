@@ -10,6 +10,7 @@ import { PositivoNegativoComponent } from './paginas/positivoNegativo/positivoNe
 import { ArraysComponent } from './paginas/arrays/arrays.component';
 import { EstadoComponent } from './paginas/estado/estado.component';
 import { CategoriaComponent } from './paginas/categoria/categoria.component';
+import { ServicoEstado } from './servico/servico.estado';
 
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module'
@@ -23,7 +24,7 @@ import { AppRoutingModule } from './app-routing.module'
   imports: [
     BrowserModule, FormsModule, AppRoutingModule
   ],
-  providers: [],
+  providers: [ServicoEstado],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

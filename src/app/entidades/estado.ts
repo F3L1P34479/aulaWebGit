@@ -3,6 +3,7 @@
 export class Estado{
   private nome: string;
   private sigla: string;
+  private detalhes: string;
 
   getNome() : string{
     return this.nome;
@@ -18,5 +19,13 @@ export class Estado{
 
   setSigla(sigla:string) : void {
     this.sigla = sigla;
+  }
+
+  getDetalhes() : string{
+    return this.detalhes;
+  }
+
+  setDetalhes(detalhes:string) : void {
+    this.detalhes = detalhes;
   }
 }
