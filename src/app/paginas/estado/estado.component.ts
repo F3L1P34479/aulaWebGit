@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Estado } from '../../entidades/estado';
 import { ServicoEstado } from '../../servico/servico.estado';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector:'estado-component',
@@ -8,15 +10,22 @@ import { ServicoEstado } from '../../servico/servico.estado';
   styleUrls:['estado.component.css']
 })
 
-export class EstadoComponent{
+export class EstadoComponent implements OnInit{
+
+  estados$ : Observable<Estado[]>;
 
   //servico : ServicoEstado = new ServicoEstado();
   listaEstado = new Array<Estado>();
   estado : Estado = new Estado();
   estado2 : Estado = new Estado();
   constructor(private servico : ServicoEstado){
-    this.listaEstado = this.servico.listaEstado;
+
   }
+
+  ngOnInit(){
+    this.estados$ = this.servico.buscar();
+  }
+
   adicionar() : void {
     this.servico.adicionar(this.estado);
     this.estado = new Estado();

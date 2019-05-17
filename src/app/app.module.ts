@@ -12,6 +12,8 @@ import { EstadoComponent } from './paginas/estado/estado.component';
 import { CategoriaComponent } from './paginas/categoria/categoria.component';
 import { ServicoEstado } from './servico/servico.estado';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module'
 
@@ -22,7 +24,7 @@ import { AppRoutingModule } from './app-routing.module'
     ArraysComponent, EstadoComponent, CategoriaComponent
   ],
   imports: [
-    BrowserModule, FormsModule, AppRoutingModule
+    BrowserModule, FormsModule, AppRoutingModule, HttpClientModule
   ],
   providers: [ServicoEstado],
   bootstrap: [AppComponent]
