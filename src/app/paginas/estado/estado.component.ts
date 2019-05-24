@@ -15,26 +15,55 @@ export class EstadoComponent implements OnInit{
   estados$ : Observable<Estado[]>;
 
   //servico : ServicoEstado = new ServicoEstado();
-  listaEstado = new Array<Estado>();
+  //listaEstado = new Array<Estado>();
   estado : Estado = new Estado();
   estado2 : Estado = new Estado();
+  salvar : boolean = true;
+
   constructor(private servico : ServicoEstado){
 
   }
 
   ngOnInit(){
-    this.estados$ = this.servico.buscar();
+    this.atualizar();
+  }
+
+  atualizar(){
+    this.estados$ = this.servico.listar();
   }
 
   adicionar() : void {
-    this.servico.adicionar(this.estado);
+    if(this.salvar){
+      this.servico.adicionar(this.estado).subscribe(
+        () =>{
+          this.atualizar();
+        }
+      );
+
+    }
+    else{
+      this.servico.alterar(this.estado).subscribe(
+        () =>{
+          this.atualizar();
+        }
+      );
+    }
+    
     this.estado = new Estado();
+    
   }
-  alterar(i:number) : void {
-    this.servico.alterar(i);
+
+  alterar(estado: Estado) : void {
+    this.estado = estado;
+    this.salvar = false;
   }
-  excluir(i:number) : void {
-    this.servico.excluir(i);
+
+  excluir(id:number) : void {
+    this.servico.excluir(id).subscribe(
+      () =>{
+        this.atualizar();
+      }
+    );
   }
 
   pegarEstado(i:number) : void{

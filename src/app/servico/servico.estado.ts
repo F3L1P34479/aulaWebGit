@@ -13,22 +13,23 @@ export class ServicoEstado{
   constructor(private http: HttpClient){
   }
 
-  adicionar(estado: Estado) : void {
-    this.listaEstado.push(estado);
+  adicionar(estado: Estado) {
+    return this.http.post(this.URL, estado).pipe(take(1));
   }
-  alterar(i:number) : void {
-    this.estado = this.listaEstado[i];
-    this.listaEstado.splice(i,1);
+
+  alterar(estado: Estado) {
+    return this.http.put(this.URL, estado).pipe(take(1));
   }
-  excluir(i:number) : void {
-    this.listaEstado.splice(i,1);
+
+  excluir(id:number) {
+     return this.http.delete(this.URL+id).pipe(take(1));
   }
 
   pegarEstado(i:number) : Estado{
     return this.listaEstado[i];
   }
-
-  buscar(){
+  //o pipe(take(1) serve para parar (cancelar) a assinatura do serviço (webservice)
+  listar(){
     return this.http.get<Estado[]>(this.URL).pipe(take(1));
   }
 

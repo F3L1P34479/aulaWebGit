@@ -38,12 +38,12 @@
         <td>{{ est.nome }}</td>
         <td>{{ est.sigla }}</td>
         <td>
-          <button class="btn btn-info" type="button" name="button" (click)="alterar(i)">
+          <button class="btn btn-info" type="button" name="button" (click)="alterar(est)">
             <i class="fas fa-edit"></i>
           </button>
         </td>
         <td>
-          <button class="btn btn-info" type="button" name="button" (click)="excluir(i)">
+          <button class="btn btn-info" type="button" name="button" (click)="excluir(est.id)">
             <i class="fas fa-trash-alt"></i>
           </button>
         </td>
